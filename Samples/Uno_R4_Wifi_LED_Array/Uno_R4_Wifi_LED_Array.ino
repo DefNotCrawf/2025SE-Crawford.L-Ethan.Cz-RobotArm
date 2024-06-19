@@ -10,6 +10,8 @@
 
 #include "Arduino_LED_Matrix.h"
 
+// arrows not needed
+/* 
 const uint32_t arrow_left[] = {
 		0x400c01c,
 		0x3fc3fc1,
@@ -37,6 +39,8 @@ const uint32_t arrow_down[] = {
 		0xf80f0060,
 		66
 };
+
+*/
 
 ArduinoLEDMatrix matrix;
 
