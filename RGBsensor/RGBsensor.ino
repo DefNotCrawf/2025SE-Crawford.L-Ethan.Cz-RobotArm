@@ -1,11 +1,11 @@
 //libraries
-
+#include "RGBsensor.h"
 
 //inputs
 
 
 //class
-
+RGBsensor sensor();
 
 void setup() {
   // put your setup code here, to run once:

@@ -1,10 +1,18 @@
 #include "RGBsensor.h"
 
+RGBsensor :: RGBsensor (
+  //input data
 
-void RGBsens::RGBsensinit() {
-  
+)
+
+
+void RGBsensor::RGBsensinit() {
+  //add stuff
 }
 
+void RGBsensor::getRGB() {
+  //add stuff
+}
 
 
 

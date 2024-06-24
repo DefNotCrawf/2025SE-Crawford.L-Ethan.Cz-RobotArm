@@ -1,23 +1,19 @@
-#ifdef RGBsensor_H
+#ifndef RGBsensor_H
 #define RGBsensor_H
 
 #include <Arduino.h>
-#include 
+#include "Adafruit_TCS34725.h"
 
-class RGBsens {
+class RGBsensor {
   private: 
     //place stuff
   public:
-    RGBsens () {} //do not use
-    RGB sens (
+    RGBsens () {}; //do not use
+    RGBsensor (
       //place variables here
     );
     void RGBsensinit();
-}
-
-
-
-
-
+    void getRGB();
+};
 
 #endif
