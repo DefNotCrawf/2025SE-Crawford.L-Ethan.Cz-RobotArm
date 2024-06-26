@@ -13,7 +13,9 @@
 #include <Arduino_LED_Matrix.h>
 
 #include "LedArray.h"
+#include "animation.h"
 
+ArduinoLEDMatrix matrix;
 
 const uint32_t animation2[][8] = {
 	{
@@ -66,17 +68,12 @@ const uint32_t animation2[][8] = {
 	}
 };
 
-ArduinoLEDMatrix matrix;
+LEDArray array1;
 
 void setup() {
+  array1.print(char Str);
   Serial.begin(9600);
-  matrix.begin();
-  matrix.textFont(Font_5x7);
-  matrix.textScrollSpeed(100);
-  matrix.stroke(0xFF, 0, 0);
-  matrix.beginText(0, 1, 0xFF, 0, 0);
-  matrix.print("v0.0.8");
-  matrix.endText(SCROLL_LEFT);
+  Serial.print("");
 }
 
 void loop() {
