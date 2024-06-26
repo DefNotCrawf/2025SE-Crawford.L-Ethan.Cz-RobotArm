@@ -7,10 +7,12 @@
 class RGBsensor {
   private: 
     //place stuff
+    byte state;
   public:
-    RGBsens () {}; //do not use
+    RGBsensor () {} //do not use
     RGBsensor (
       //place variables here
+      byte state
     );
     void RGBsensinit();
     void getRGB();

@@ -1,9 +1,9 @@
 #include "RGBsensor.h"
 
-RGBsensor :: RGBsensor (
+RGBsensor::RGBsensor (byte state) {
   //input data
-
-)
+  this->state = state;
+}
 
 
 void RGBsensor::RGBsensinit() {
