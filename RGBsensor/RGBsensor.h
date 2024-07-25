@@ -6,15 +6,22 @@
 
 class RGBsensor {
   private: 
-    //place stuff
-    byte state;
+    float Rval;
+    float Gval;
+    float Bval;
+    bool state;
+    byte pin;
   public:
     RGBsensor () {} //do not use
     RGBsensor (
       //place variables here
-      byte state
+      float Rval,
+      float Gval,
+      float Bval,
+      byte state,
+      byte pin
     );
-    void RGBsensinit();
+    void RGBsensinit(byte pin);
     void getRGB();
 };
 
