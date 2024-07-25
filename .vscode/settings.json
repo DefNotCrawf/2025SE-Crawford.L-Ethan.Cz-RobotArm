@@ -1,4 +1,3 @@
 {
-    "C_Cpp.default.compilerPath": "c:\\Users\\crawford.lieu\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\bin\\arm-none-eabi-g++.exe",
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
 }
