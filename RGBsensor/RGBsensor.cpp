@@ -1,34 +1,39 @@
 #include "RGBsensor.h"
 
-RGBsensor::RGBsensor (float Rval, float Gval, float Bval, byte state, byte pin) {
+RGBsensor::RGBsensor (float Rval, float Gval, float Bval, byte pin) {
   //input data
   this->Rval = Rval;
   this->Gval = Gval;
   this->Bval = Bval;
-  this->state = state;
-  this ->pin = pin;
+  this->pin = pin;
 }
 
 
-void RGBsensor::RGBsensinit(byte state) {
-  //add stuff
+void RGBsensor::RGBsensinit(byte pin) {
   pinMode(pin, INPUT);
-  if(defaultState == 1) {
-      state = 1;
-      digitalWrite(pin, state);
-    }
-    else {
-      state = 0;
-      digitalWrite(pin, state);
-    }
+  Adafruit_TCS34725.setIntegrationTime();
 }
 
-void RGBsensor::getRGB(float Rval, float Gval, float Bval) {
-  //add stuff
-  print(Adafruit_TCS34725.getRGB())
+void RGBsensor::getVals(float Rval, float Gval, float Bval) {
+  Adafruit_TCS34725.getRGB();
 }
 
+void RGBsensor::getCol(float Rval, float Gval, float Bval) {
+  switch (getVals()) {
+    case (Bval > Rval && Bval > Gval) 
+      {
 
+      }
+    case (Gval > Rval && Gval > Bval)
+      {
+
+      }
+    case (Rval > Gval && Rval > Bval) 
+      {
+
+      }
+  }
+}
 
 
 

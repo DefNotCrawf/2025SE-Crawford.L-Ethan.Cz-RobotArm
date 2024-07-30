@@ -9,20 +9,15 @@ class RGBsensor {
     float Rval;
     float Gval;
     float Bval;
-    bool state;
     byte pin;
   public:
     RGBsensor () {} //do not use
     RGBsensor (
-      //place variables here
-      float Rval,
-      float Gval,
-      float Bval,
-      byte state,
-      byte pin
+      float Rval, float Gval, float Bval, byte pin
     );
-    void RGBsensinit(byte pin);
-    void getRGB();
+    void RGBsensinit(byte pin); //initiliases system
+    void getVals(float Rval, float Gval, float Bval); //return colour in RGB values
+    void getCol(); //return colour as string
 };
 
 #endif
