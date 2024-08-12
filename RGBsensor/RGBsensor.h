@@ -2,22 +2,24 @@
 #define RGBsensor_H
 
 #include <Arduino.h>
+#include <Wire.h>
 #include "Adafruit_TCS34725.h"
 
 class RGBsensor {
   private: 
-    float Rval;
-    float Gval;
-    float Bval;
+    int Rval;
+    int Gval;
+    int Bval;
     byte pin;
+    byte gammatable[256];
+    Adafruit_TCS34725 tcs;
   public:
     RGBsensor () {} //do not use
     RGBsensor (
-      float Rval, float Gval, float Bval, byte pin
+      int Rval, int Gval, int Bval, byte pin, byte gammatable[256], Adafruit_TCS34725 tcs
     );
-    void RGBsensinit(byte pin); //initiliases system
-    void getVals(float Rval, float Gval, float Bval); //return colour in RGB values
-    void getCol(); //return colour as string
+    void RGBsensinit(byte pin); //initialises the system
+    void getCol(int Rval, int Gval, int Bval); //print colour
 };
 
 #endif
